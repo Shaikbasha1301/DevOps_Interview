@@ -178,7 +178,7 @@ Merged into develop (so future versions contain the fix)
 A: Classic is GUI-based and suitable for simpler workflows
 YAML(yet another markeup laungue) provides version control, flexibility, and reuse through templates.
 
-2:Difference between agaile and devops
+--->>2:Difference between agaile and devops
 
 Agile: Agile methodology is focused on the delivery feature on small iterative cycle with contienous feedback and collabrated blw cross fucntional teams
 -> Tools used Jira and Azure Borads 
@@ -196,7 +196,7 @@ Devops is used automation
 Devops used agile methodlogies
 Devops treeted your IAAC
 
-3:Difference Between Declarative and Scripted 
+--->>3:Difference Between Declarative and Scripted 
 
 High-level, structured pipeline syntax introduced to simplify CI/CD pipeline creation
 Syntax styile is simple and uses a DSL (Domain-Specific Language) built on top of Groovy.                               Original Groovy-based syntax that provides full control .           ` 
@@ -204,10 +204,10 @@ ease to learn and write                                                         
 starts with pipeline{}                                                                                                                                                            Starts with node{}
 
 
-4.What is the difference between Virtual Machines and Containers?
+--->>4.What is the difference between Virtual Machines and Containers?
 VMs run a full OS and require more system resources. Containers share the host OS kernel and only include the app and its dependencies, making them lighter, faster, and more portable.
 
-Q.Explain the Docker lifecycle.
+--->>Q.Explain the Docker lifecycle.
 Build (image creation)
 Create (container is created but not running)
 Start/Run (container runs)
@@ -215,7 +215,7 @@ Pause/Unpause
 Stop/Restart/Remove
 You manage containers using docker commands as per app requirements.
 
-5.Write a Docker file for any Application
+--->>5.Write a Docker file for any Application
 
 FROM nginx:latest
 WORKDIR /usr/share/nginx/html
@@ -258,7 +258,7 @@ COPY --from=basha /rehan .
 EXPOSE 3000
 CMD ["node", "index.js"]
 
-6. How do deployments happen in Kubernetes?
+--->>6.How do deployments happen in Kubernetes?
 
 apiVersion: apps/v1
 kind: Deployment
@@ -282,9 +282,8 @@ ec:
         ports:
         - containerPort: 80
 
-7.What is a docker-compose file? Explain what it does. Write one sample file if you can.
+--->>7.What is a docker-compose file? Explain what it does. Write one sample file if you can.
 A docker-compose.yml defines multi-container apps. It manages containers, networks, and volumes together.
-9
 Sample:
 version: '3'
 services:
@@ -293,7 +292,7 @@ services:
     ports:
       - "80:80"
 
-8. Which tool do you use to track daily work status?
+--->>8. Which tool do you use to track daily work status?
 
 “We use Jira to track daily work activities. All tasks such as stories, bugs, and change requests are created as Jira tickets. I update the status daily, add comments, and log the work done. During daily stand-up calls, we review the Jira board to track progress and blockers.”
 
@@ -302,7 +301,7 @@ Centralized tracking
 Visibility across teams
 Audit and reporting support
 
-9.What project are you currently working on?
+--->>9.What project are you currently working on?
 
 “I am working on a cloud-based application project where my role involves CI/CD pipeline support, containerized application deployments, Kubernetes operations, monitoring, and production support. I work closely with development teams to ensure smooth releases and system stability
 
@@ -334,7 +333,7 @@ COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
-12.Mention some Docker network types and explain their use cases.
+--->>12.Mention some Docker network types and explain their use cases.
 Bridge:  Default Network Used when containers run on the same host. Containers can talk to each other using container names. Used for single host apps
 Host:  Docker container shares the host machine’s network . it give ip address but not the port . Used for High performance apps
 None Network:  No networking. Completely isolated. Only loopback.
@@ -344,50 +343,50 @@ It cannot communicate with the host machine
 It cannot communicate with other containers/VM
 It has only a loopback interface (localhost: 127.0.0.1)
 
-13.What is the difference between CMD and ENTRYPOINT?
+--->>13.What is the difference between CMD and ENTRYPOINT?
 Both components are used while creating ther container 
 CMD values can be overridable at runtime and ENTRYPOINT values can't be overridable and ENTRYPOINT is a main command. CMD is usually used as default argument to ENTRYPOINT 
 
 ENTRYPOINT ["python3"]
 CMD ["app.py"] [test.py] ---change 
 
-14.Where are Docker volumes stored?
+--->>14.Where are Docker volumes stored?
 Volumes are stored in /var/lib/docker/volumes on the host machine.
 
-15.What is the difference between COPY and ADD?
+--->>15.What is the difference between COPY and ADD?
 COPY copies files/directories to the container; ADD can also extract tar files and fetch URLs and ADD offering more functionality but is not recommended unless needed.
 
-16.How many containers can we run in Docker exactly?
+--->>16.How many containers can we run in Docker exactly?
 Limited by system resources (CPU, memory); no strict upper limit.
 
-17.What happens to the data inside a container when you delete the running container?
+--->>17.What happens to the data inside a container when you delete the running container?
 Data is lost unless stored in a volume or bind mount.
 
-18. What is Kubernetes networking and how it works?
+--->>18. What is Kubernetes networking and how it works?
 Kubernetes ensure every pod get its own ip and communicate with other pods with NAT 
 Services can provide a stable IP because pod IP keeps changing.
 kube-proxy sends traffic to the right pod behind the service.
 
-19. What is the difference bewtween PV and PVC
+--->>19. What is the difference bewtween PV and PVC
      Persistant Volume is a piece  actual storage provided by admin or cloud and Persistant Volume Claim is user requested for that storage 
      persitant volume can store the data outside the pods
      
-20.what is  Liveness Probe and Readiness Probe
+--->>20.what is  Liveness Probe and Readiness Probe
 Liveness Probe 
      Checks if the container is alive. If it fails → Kubernetes restarts the container.
 Readiness Probe
     Checks if the container is ready to serve traffic. If it fails → Pod stays running but does not receive traffic.
     
-21.  Differnce b/w Taints and Tolerations
+--->>21.  Differnce b/w Taints and Tolerations
          Applied on nodes and they do not schedule pods here unlss they are allowed.
 Tolerations
         Applied on pods they tell Kubernetes: this pod is allowed to run on that tainted node
         
-22. Difference b/w Affinity and Anti-Affinity
+--->>22. Difference b/w Affinity and Anti-Affinity
   Affinity :             Affinity is a scheduling rule that attracts pods to specific nodes or other pods.
   Anti-Affinity:     Anti-Affinity is a scheduling rule that keeps pods away from specific nodes or other pods to improve availability.     
   
-23. what are the loadbalancer types?
+--->>23. what are the loadbalancer types?
 
     Application Load Balancer (ALB) — Layer 7
                 Works at HTTP/HTTPS layer
@@ -407,23 +406,23 @@ Tolerations
        No advanced routing logic
        Only used for older architectures. 
 
-24. How do you manage CI/CD in Azure DevOps?
+--->>24. How do you manage CI/CD in Azure DevOps?
 A: I use Azure Pipelines  (YAML or Classic) to automate builds,  tests, and deploy to AKS or  I also integrate SonarQube for code quality and use Azure Boards for work tracking.
 
-25. How do you manage CI/CD in AWS?
+--->>25. How do you manage CI/CD in AWS?
 A.I use AWS CodePipeline to automate the CI/CD process. I use CodeCommit or GitHub as the source, CodeBuild for building and testing, and CodeDeploy to deploy to EC2, ECS, or EKS.
 I also integrate SonarQube for code quality checks and use CloudWatch for monitoring the pipeline and deployments.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-1.What would you do if an EC2 instance is getting slow?
+--->>1.What would you do if an EC2 instance is getting slow?
 A.
  ->Check CPU/memory usage via CloudWatch
 ->Analyze running processes
 ->Restart instance 
 
-2. If users can't access an app hosted on EC2, what would you do?
+--->>2. If users can't access an app hosted on EC2, what would you do?
 A.
 ->Check instance state
 ->Verify security groups and firewall
@@ -434,7 +433,7 @@ A.
 Load Balancer – Distributes incoming traffic across multiple backend servers to improve availability and performance. Example: AWS ALB, Nginx load balancing.
 Reverse Proxy – Sits in front of backend servers and routes client requests to them. Can also provide SSL termination, caching, compression, authentication. Example: Nginx, Apache.
 
-4. What are the key Docker components?
+--->>4. What are the key Docker components?
 .
 Docker Engine (Daemon) – Core part of the docker that runs on the host machine, manages images, containers, networks, and volumes.
 Docker Images – Read-only templates used to create containers. Built from a Dockerfile. it containes libraraies ,code and  dependencies
@@ -447,30 +446,30 @@ Docker Compose – Tool to define and run multi-container applications using a d
 Docker Hub / Registry – Online repository (public or private) for storing and sharing Docker images.
 
 
-6. What steps would you take if you see an "unhealthy" status in an ELB?
+--->>6. What steps would you take if you see an "unhealthy" status in an ELB?
 ->Check EC2 health checks
 ->Review app logs
 ->Verify port and security group configurations
 ->Restart instances if needed
 
-12. How do you optimize or reduce Docker images for better performance?
+--->>12. How do you optimize or reduce Docker images for better performance?
 ->use minimal base images -slim and Alpin images
 ->Use multi-stage builds
 -> use .dockerignore(unwanted files)
 ->Clean up temp files in Dockerfile
 ->Reduce number of layers
 
-13. How would you secure a Docker container?
+--->>13. How would you secure a Docker container?
 ->Run as non-root
 ->Use trusted images
 ->Use image scanning tools (Trivy, Docker Scout)
 ->Limit container capabilities
 ->Use volumes for persistence
 
-14. What is Jenkins scaling, and how do you achieve it?
+--->>14. What is Jenkins scaling, and how do you achieve it?
 Jenkins scaling means increasing its capacity by adding agent nodes to handle more jobs. This can be achieved by setting up a master-agent architecture and using the Kubernetes plugin to auto-scale agents as pods based on workload
 
-15. What is the role of the Master and Node in Jenkins?
+--->>15. What is the role of the Master and Node in Jenkins?
 Master:
 master controls the entire jenkin env
 scheduling the build jobs
@@ -481,45 +480,45 @@ K
 Node: it can executes the build agent which are sent by master
 nodes can run in any platform and os
 
-16. What is a Sidecar container, and when would you use it?
+--->>16. What is a Sidecar container, and when would you use it?
 A. sidecar is a container in the same pod that supports the main container. Used for logging, monitoring, or proxying (e.g., Fluentd, Envoy).
 
-17. Difference between ConfigMap and Secrets?
+--->>17. Difference between ConfigMap and Secrets?
 ConfigMap: Stores non-sensitive configuration data in key-value pairs.
 Secrets: Stores sensitive data like passwords or API keys in base64 encoded format for security.
 
-18. What is the default deployment in Kubernetes?
+--->>18. What is the default deployment in Kubernetes?
 A.The default and most commonly used controller for deploying applications is the Deployment resource, which manages ReplicaSets and ensures the desired number of Pods are running
 
-19. Container is running but the application is not responsding
+--->>19. Container is running but the application is not responsding
      check the logs
     check the docker file
     ensure the N/W configurstons 
     restart the container if needd
 
-20. What is a Static Pod and how is it different from a regular pod?
+--->>20. What is a Static Pod and how is it different from a regular pod?
 A: Static Pods are managed by Kubelet, not the control plane. Defined in manifest files on nodes.
 
-21. What is EKS (Elastic Kubernetes Service)
+--->>21. What is EKS (Elastic Kubernetes Service)
                A managed Kubernetes service on AWS. It runs Kubernetes clusters without needing to manage the control plane.
 
-23. Imagepullbackoff issue
+--->>23. Imagepullbackoff issue
    Wrong image name or tag
    Image not pushed to registry
    Private registry, missing credentials
    Incorrect DockerHub or ECR permissions
 
-23. What is the default scaling and how does it work?
+--->>23. What is the default scaling and how does it work?
 A: Kubernetes uses Horizontal Pod Autoscaler (HPA) by default. It scales based on CPU/memory metrics.
 
-24. What is RBAC and why is it important?
+--->>24. What is RBAC and why is it important?
 A: Role-Based Access Control limits access to resources. Ensures only authorized users can perform actions.
 
-25. Difference between ClusterRole and Role in RBAC?
+--->>25. Difference between ClusterRole and Role in RBAC?
 Role: Grants access within a namespace
 ClusterRole: Grants access across the cluster
 
-26. DIfference b/w container and Images
+--->>26. DIfference b/w container and Images
       Docker Image
 A read-only template.
 Contains application code, packages, dependencies, and base OS layers.
@@ -535,7 +534,7 @@ We can modify a running container (install packages, edit files).
                           Container = actual running application created from the image
 
 
-27.  Docker Architechture
+--->>27.  Docker Architechture
 Docker Client
 It is where we run commands like docker build, docker run, docker pull.
 The client sends requests(command ) to the Docker Engine using REST API.
@@ -549,26 +548,26 @@ Host = Where containers actually run
 Docker Registry
 Repository to store and share Docker images. Default: Docker Hub
 
-28. Kubernetes Architecture 
+--->>28. Kubernetes Architecture 
    API Server
            Entry point for all Kubernetes commands 
-    etcd
+   etcd
            Distrubited key-value store for cluster state and configuration 
-  Controller Manager
+   Controller Manager
              Ensures the cluster actual state matchs to desired state.
-Scheduler
+   Scheduler
              Assigns pods to nodes based on the resource availability (CPU, RAM), affinity/anti-affinity, taints/tolerations
              
 Worer_Node 
      Kubelet
                   It makes sure checks the containers are running as expected.
-   Kube-proxy
+     Kube-proxy
         Manages networking and service discovery. Handles internal cluster communication.
-   Container Runtime
+     Container Runtime
        Kubernetes does not run the containers directly by itself. It relies(depends) on a container runtime like Docker and the runtime is responsible for pulling images, starting containers, and managing their lifecycle.
        
     
-29. What is a StatefulSet?
+--->>29. What is a StatefulSet?
 A StatefulSet is used to manage stateful applications where each pod needs a stable pod identity and persistent data.
              Ordered Deployment and Deletion
         Pods are created one by one (0 → 1 → 2)
@@ -579,7 +578,7 @@ A StatefulSet is used to manage stateful applications where each pod needs a sta
             Orderd rolling updates but not default 
 mostly used for database
                         
-30.What is a Deployment?
+--->>30.What is a Deployment?
 A Deployment is used to manage stateless applications and performs versioned updates.
         A Deployment can:
             Manage ReplicaSets
@@ -587,13 +586,13 @@ A Deployment is used to manage stateless applications and performs versioned upd
       Rollback to previous versions
      Perform zero-downtime upgrades
 
-31. What is DaemonSet
+--->>31. What is DaemonSet
 It is a cluter level service , copy the specific pod runs on every worker node in the cluster and responsible for 
 Node monitoring
       Logging agents 
       Security agents
 
-32. What is Replicasets
+--->>32. What is Replicasets
          A ReplicaSet ensures a specified number of identical pods are always running.
 If a pod dies → creates a new one
 Maintains desired replicas
@@ -609,32 +608,32 @@ Cloud provider creates and manages the LB (AWS, GCP, Azure) and It also gives a 
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
-1. Jenkins pipeline works in staging but fails in production. How do you debug it?
+--->>1. Jenkins pipeline works in staging but fails in production. How do you debug it?
 A: Compare staging and production environment variables, credentials, configurations, and permissions. Review pipeline logs for production-specific errors and verify external dependencies or network access in the production environment.
 
-2. Jenkins job stuck in “Waiting for executor” – what to do?
+--->>2. Jenkins job stuck in “Waiting for executor” – what to do?
 A: Check if all Jenkins executors are busy or nodes are offline. If needed, increase executor count on existing nodes or add more agent nodes to handle the workload.
 
-3. Docker container keeps restarting — how do you troubleshoot?
+--->>3. Docker container keeps restarting — how do you troubleshoot?
 Wrong ENTRYPOINT or CMD in Dockerfile
 Missing environment variables or config files
 Application crash due to dependency issues
 Health check failures causing restarts
             Fix the issue, rebuild the image, and redeploy.
 
-4 :Docker container in Dead/Exited state 
+--->>4 :Docker container in Dead/Exited state 
 Wrong ENTRYPOINT or CMD
 Missing environment variables
 Missing dependencies / files
 check the logs
 
-5. How do you handle secrets securely inside Docker containers?
+--->>5. How do you handle secrets securely inside Docker containers?
 Avoid hardcoding secrets in Dockerfiles or code.
                    I  use Docker secrets in Swarm, 
                    Kubernetes Secrets via environment variables or volumes 
                    external secret managers like AWS Secrets Manager,Azure Key Vault.
 
-6. Pod stuck in CrashLoopBackOff —  Pending Pod
+--->>6. Pod stuck in CrashLoopBackOff —  Pending Pod
 Run kubectl describe pod for reason 
 kubectl logs to find the last crash .
 
@@ -658,10 +657,10 @@ NodeSelector/affinity mismatch →    adjust labels
 Taints without tolerations →     add toleration
 PVC not bound →          fix StorageClass or volume
 
-7. Deployment fails mid-way — how do you roll back?
+--->>7. Deployment fails mid-way — how do you roll back?
 kubectl rollout undo deployment <deployment-name>
 
-8. How do you debug the kubernetes pods
+--->>8. How do you debug the kubernetes pods
 describe → check pod details & events                          >>>>        kubectl describe pod <pod-name>
       logs → check application errors                                       >>>>        kubectl logs <pod-name>
       exec → go inside the container and debug                     >>>>       kubectl exec -it <pod-name> -- /bin/bash
@@ -669,14 +668,14 @@ describe → check pod details & events                          >>>>        kub
       events → see why pod is crashing or not scheduling    >>>>       kubectl get events
 
 
-9. How do you Optimisation in kubernetes?
+--->>9. How do you Optimisation in kubernetes?
 Use HPA, VPA, and Cluster Autoscaler to scale pods and nodes automatically.
 Set proper CPU and Memory requests and limits to avoid over-provisioning (Resource Quota)
 Apply Node Affinity/Anti-Affinity, Taints, Tolerations, for better workload distribution.
 Configure Liveness, Readiness, and Startup probes to keep only healthy pods running.
 Uselogging agents and monitor using Prometheus, Grafana, Elastic/Loki, avoiding excessive log retention.
 
-10. Teammate and you pushed to same branch — conflict — what next?
+--->>10. Teammate and you pushed to same branch — conflict — what next?
 ✅ Git pull, resolve merge conflicts manually, commit and push again:
 
 git pull origin branchname
@@ -686,22 +685,22 @@ git commit -m "Resolved merge conflicts"
 git push
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1.What is VPC?
+--->>1.What is VPC?
 Virtual Private Cloud used to create a private cloud within a public cloud. This private cloud provides isolation and security for our resources and services. 
 Every VPC has its own IP address, Subnets, Internet Gateways & Route Tables
 
-2.How do you manage the secrets in terraform?
+--->>2.How do you manage the secrets in terraform?
 A.   avoid hardcoding secrets in Terraform code.
 Store secrets in AWS Secrets Manager,or azure key  Vault. 
 Restrict access to state file with IAM policies.
 Use data blocks in Terraform to fetch them securely. 
 Keep state files encrypted (e.g., S3 with KMS). 
 
-3.How would you setup the alerts for high cpu usage in promtheus + grafana?
+--->>3.How would you setup the alerts for high cpu usage in promtheus + grafana?
 A .   I’d create an alert rule in Prometheus for CPU > 80% over a set time and configure Alertmanager to send notifications to email . 
      In Grafana, I’d set up a dashboard with CPU metrics and thresholds to trigger visual and notification alerts.
 
-4. Deployment Stratagies
+--->>4. Deployment Stratagies
      Canary
              Canary deployment sends traffic to a small portion of the new version,  Monitor performance/errors. checks stability, andIf stable → gradually roll out to 100%.
      Blue- Green 
@@ -714,7 +713,7 @@ A .   I’d create an alert rule in Prometheus for CPU > 80% over a set time and
     Recreating 
           the old version is fully stopped, then new version is deployed in its place.Delete all old pods.Create new pods
 
-6. Why do we use an Ingress Controller?
+--->>6. Why do we use an Ingress Controller?
 Ingress is used to manage external HTTP/HTTPS traffic and route it to internal services. It reduces multiple LoadBalancers by using one public IP.
 it Supports host-based routing, path-based routing, and TLS/SSL.
 
@@ -723,18 +722,18 @@ If Service file - Load Balancer, then Ingress file not needed - Network Load Bal
 If Service file - Cluster IP , then Ingress file needed. And if NGINX Ingress Controller is installed then no load balancer are created and doesn't call AWS APIs, acts as reverse proxy.
 If we create lb through Terraform, Since the load balancer is provisioned outside Kubernetes, we expose the application using a NodePort or ClusterIP service and attach the Kubernetes nodes or pod IPs to the load balancer’s target group. We avoid using Service type LoadBalancer to prevent duplicate LBs.
 
-7. What is Ingress in Kubernetes?
+--->>7. What is Ingress in Kubernetes?
       Ingress exposes internal services to the internet using HTTP/HTTPS.
       It works at Layer 7 (application layer). 
       Routes traffic based on hostname or URL path.
 
-8. How does Ingress route multiple services with one IP?
+--->>8. How does Ingress route multiple services with one IP?
      Ingress uses Layer 7 routing rules.
      Host-based routing → api.example.com, admin.example.com
      Path-based routing → /users, /orders, /payments
      Based on rules, it sends traffic to the correct backend service.
 
-9.What is a Subnet and how is it used in cloud or Kubernetes networking?
+--->>9.What is a Subnet and how is it used in cloud or Kubernetes networking?
 A. Subnet :Subnets are used to divide the large networks into smaller networks 
     Public Subnet:  Public subnet resources can be accessible from Internet
     Private Subnet: Private subnets resources are not possible to access from the internet. But this can be accessible using load balancers or NAT gateways which are present in Public Subnet
@@ -751,7 +750,7 @@ GitHub → Settings → Webhooks
       URL: http://jenkins-server/github-webhook/
       Event: push or pull request
 
-11. How can you secure passwords and access in Jenkins?
+--->>11. How can you secure passwords and access in Jenkins?
 
 Use Jenkins Credentials Store — save passwords, tokens, SSH keys securely.
 Do not hardcode secrets in pipelines or code.
@@ -759,7 +758,7 @@ Mask passwords — so they don’t appear in logs.
 Use RBAC — give access only to required users.
 Use external secret managers (AWS Secrets Manager / Azure Key Vault) for production.
 
-12. AWS services used in your project
+--->>12. AWS services used in your project
 
 EC2 – Hosted backend services and some microservices.
 EKS/ECS (Docker) – Container orchestration for microservices + easy deployments.
@@ -772,32 +771,32 @@ ALB / NLB – Load balancing to distribute traffic to services.
 Auto Scaling – Automatically scaled EC2/EKS workloads based on load.
 Lambda – Used for automation tasks and event-based jobs.
 
-14. Difference between Horizontal and Vertical Scaling
+--->>14. Difference between Horizontal and Vertical Scaling
 HPA scales horizontally by increasing or reducing the number of pods based on live metrics like CPU, memory, or custom Prometheus metrics.
 Watches metrics (CPU, memory, or custom metrics from Prometheus).
 If threshold is crossed, it increases or decreases replica count.
 
-15. What is Terraform?
+--->>15. What is Terraform?
 Terraform is an Infrastructure as Code (IaC) tool used to provision and manage cloud resources using declarative configuration files.
 You define what infrastructure you want, and Terraform creates/updates it to reach that desired state.
 
-17. How to manage existing/old infra using Terraform?
+--->>17. How to manage existing/old infra using Terraform?
           Use terraform import.
 Run terraform import <resource> <resource_id>.
 Run terraform plan → to sync configuration.
         This converts unmanaged infra into Terraform-managed infra without destroying it.
 
-18. What is Terraform Provisioning?
+--->>18. What is Terraform Provisioning?
 Provisioning means executing scripts or configurations on a resource after it’s created.
 
 Terraform supports:
 local-exec → run commands on your machine.
 remote-exec → run commands inside a VM/instance (SSH).
 
-19. What are headless serivces
+--->>19. What are headless serivces
   Headless Service disables virtual IP and gives DNS records for each pod.  It’s used for StatefulSets, databases, and workloads that require direct pod-to-pod communication.
 
-21.How does Kubernetes schedule a Pod? Walk through the control-plane process.
+--->>21.How does Kubernetes schedule a Pod? Walk through the control-plane process.
 
 Flow:
     User applies manifest 
@@ -813,7 +812,7 @@ Kubelet on that node pulls image
 Container runtime (containerd/docker) starts the pod
 Kubelet updates status back to API server
 
-23. What happens when Terraform apply fails halfway? 
+--->>23. What happens when Terraform apply fails halfway? 
   
   Partial resources created.
   State file updated with successful resources.
@@ -823,7 +822,7 @@ Identify failed resources
 terraform plan to re-evaluate
 Reapply
 
-25. Explain state locking in Terraform — why is it important?
+--->>25. Explain state locking in Terraform — why is it important?
 State locking prevents multiple users from modifying the same Terraform state at the same time.
 It ensures that only one Terraform operation (plan/apply/destroy) runs against the infrastructure at once.
 
@@ -833,7 +832,7 @@ Avoids race conditions — two applies running together can create or delete con
 Prevents corrupted state files — partial writes can break the entire environment.
 Stops duplicate resources — like two identical VPCs or subnets being created.
 
-26. What is Terraform drift and what actions should we take?
+--->>26. What is Terraform drift and what actions should we take?
 
 Terraform drift happens when the real cloud infrastructure changes, but those changes are not in Terraform code or state — usually because someone modified resources manually in the console 
 
@@ -843,7 +842,7 @@ If the change is correct, update the Terraform code to match.
 To prevent future drift, avoid manual changes and manage everything through Terraform/IaC.
 
 
-29. How do you integrate SonarQube into a Jenkins pipeline?
+--->>29. How do you integrate SonarQube into a Jenkins pipeline?
 
 Configure SonarQube server and token in Jenkins global config.
 Add SonarQube Scanner plugin.
@@ -856,34 +855,34 @@ Wait for Sonar analysis.
 Fail the build if Quality Gate fails (e.g., high bugs, low coverage).
 
 
-33. Explain Terraform workspaces — when to use?
+--->>33. Explain Terraform workspaces — when to use?
 Workspaces allow multiple state files for the same code.
 Typical use: dev, qa, prod environments from same Terraform module.
 Each workspace has its own state, so resources are separated in cloud.
 
-34. Difference between terraform plan and terraform apply?
+--->>34. Difference between terraform plan and terraform apply?
 terraform plan:
 Shows execution plan, what will change, but does not make changes.
 terraform apply:
 Executes the plan and actually creates/updates/destroys infra.
 Normal flow: plan for review ➜ apply for actual change.
 
-26. How does the Terraform state file work internally?
+--->>26. How does the Terraform state file work internally?
 State file keeps a mapping between Terraform resources and real cloud resources.
 Stores IDs, metadata, and dependencies.
 Terraform uses it to know:
 What already exists.
 What to change vs create/destroy.
 
-27. How do you troubleshoot container memory leaks?
+--->>27. How do you troubleshoot container memory leaks?
  Check memory usage using docker stats
  Look at pod status — if OOMKilled, memory limit is too low or app is leaking.
  Add proper requests/limits in Kubernetes to control usage.
  Inspect application logs and take heap dumps (Java/Node/Python) to find what uses memory.
 
 
-___________________________________________________________________________________________________01000_
-1. What is the difference between Public IP and Private IP?
+___________________________________________________________________________________________________
+--->>1. What is the difference between Public IP and Private IP?
 
 A public IP is an address that is reachable over the internet.
 It is globally unique and assigned by the cloud provider 
@@ -898,7 +897,7 @@ It is not reachable from the internet directly.
 Works only within internal networks
 More secure by default
 
-2.What is the Difference between NAT Gateway and IGW
+--->>2.What is the Difference between NAT Gateway and IGW
 
 An Internet Gateway allows resources to send AND receive traffic directly from the internet.
 Supports inbound + outbound traffic
@@ -928,20 +927,20 @@ AWS S3 + DynamoDB
 Terraform Cloud / Enterprise
 The remote backend becomes the single source of truth.
 
-2.Automatic Locking During Terraform Operations
+--->>2.Automatic Locking During Terraform Operations
 When a remote backend is configured:
 terraform plan / terraform apply
 → Terraform automatically acquires a lock
 Lock stays active during the operation
 Lock is released when the command finishes
 
-3.Access Control (RBAC / IAM)
+3--->>.Access Control (RBAC / IAM)
 Locking alone isn’t enough.
 We also:
 Restrict who can write to the state
 Allow only CI/CD pipelines or limited engineers to run Terraform
 
-4. What is the difference between TCP and UDP?
+--->>4. What is the difference between TCP and UDP?
 TCP
 TCP is a reliable protocol. and it is slower
 It makes sure data is delivered correctly and in order.
@@ -954,7 +953,7 @@ It sends data without checking if it arrived.
 No connection setup
 No re-sending of data, data may be lost
 
-5.What is AWK and SED?
+--->>.What is AWK and SED?
 AWK is used to extract and analyze data from text files or command output.
 Best for working with columns
 Mainly used for reading and printing data
@@ -970,7 +969,7 @@ Bash
 sed 's/old/new/' file.txt
 Replaces old with new
 
-6.Difference between count, for_each, and dynamic in Terraform
+--->>6.Difference between count, for_each, and dynamic in Terraform
 1. count
 count is used when you want to create multiple identical resources using a number.
 Works with index numbers (count.index)
@@ -988,25 +987,25 @@ Keeps code clean and reusable
 
 Recent Interview Questions
 
-2. What AWS services have you used in your project and how?
+--->>1. What AWS services have you used in your project and how?
 Answer:
 I used EC2 for virtual machines, S3 for storing files, RDS for databases, VPC for networking, IAM for user access control, CloudWatch for monitoring, and Lambda for serverless tasks. I managed them mostly using Terraform.
-3. How would you rate your Linux skills?
+--->>2. How would you rate your Linux skills?
 Answer:
 I would rate myself 7 or 8 out of 10. I can work well with the terminal, run system commands, write shell scripts, and handle file permissions, services, and logs.
-4. What are some common Linux commands you use regularly?
+--->>4. What are some common Linux commands you use regularly?
 Answer:
 I use commands like ls, cd, top, ps, grep, chmod, chown, df, and journalctl. These help me manage files, check performance, find logs, and handle user permissions.
-5. How can you check CPU usage on a Linux system?
+--->>5. How can you check CPU usage on a Linux system?
 Answer:
 I use top, htop, or mpstat to check CPU usage. top shows live usage of CPU, memory, and processes. htop is more user-friendly.
-6. How would you find the last 5 users who logged into a Linux machine?
+--->>6. How would you find the last 5 users who logged into a Linux machine?
 Answer:
 I can use the last command to see recent logins. To see the last 5 users, I run: last -n 5
-7. How would you containerize an Nginx web application using Docker?
+--->>7. How would you containerize an Nginx web application using Docker?
 Answer:
 I would create a Dockerfile with nginx as the base image, copy the website files into the container, and expose port 80. Then I’d build and run the Docker container.
-8.   You have a Node.js app on port 8081 — how would you write a Dockerfile for it?
+--->>8. You have a Node.js app on port 8081 — how would you write a Dockerfile for it?
 Answer:
 FROM node:18 
 WORKDIR /app
@@ -1014,10 +1013,10 @@ COPY . .
 RUN npm install
 EXPOSE 8081
 CMD ["node", "index.js"]
-9.   What is a multi-stage Dockerfile and why is it useful?
+--->>9.What is a multi-stage Dockerfile and why is it useful?
 Answer:
-A multi-stage Dockerfile helps reduce image size. The first stage is used to build the app, and the second stage copies only the final output. Yes, we can use the second stage as the base if needed.
-10.   Write a Dockerfile for a ReactJS application.
+--->>A multi-stage Dockerfile helps reduce image size. The first stage is used to build the app, and the second stage copies only the final output. Yes, we can use the second stage as the base if needed.
+10.Write a Dockerfile for a ReactJS application.
 Answer:
 FROM node:18 as build
 WORKDIR /app
@@ -1028,22 +1027,22 @@ FROM nginx:alpine
 COPY--from=build /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
-11.   Have you worked with Kubernetes? Can you describe your experience?
+--->>11.Have you worked with Kubernetes? Can you describe your experience?
 Answer:
 Yes, I have deployed applications using Kubernetes. I created Deployments, Services, ConfigMaps, and used kubectl to manage clusters. I also worked with Helm charts and monitored pods.
-12.   Based on a Dockerfile, how would you write a Kubernetes Deployment manifest?
+--->>12.Based on a Dockerfile, how would you write a Kubernetes Deployment manifest?
 Answer:
 I would create a YAML file with apiVersion, kind: Deployment, and define the spec with replicas, container image, ports, and labels. Then apply it using kubectl apply -f.
 
-16. In a Kubernetes cluster, one ReplicaSet is not functioning properly. 
-How would you debug it?
+--->>16. In a Kubernetes cluster, one ReplicaSet is not functioning properly. 
+How would you .debug it?
 Answer:
 I would describe the ReplicaSet and its pods using kubectl describe rs <name>. Then check if the pods are scheduled, healthy, and if there’s any issue in the events section.
-17.    How does a Kubernetes application communicate with the external world?
+--->>17. How does a Kubernetes application communicate with the external world?
 Answer:
 We expose the app using a Service of type LoadBalancer or NodePort. If it’s behind an Ingress controller, we use an Ingress resource for routing external traffic.
 
-18.    What are the lifecycle states of an EC2 instance?
+--->>18. What are the lifecycle states of an EC2 instance?
 Answer:
 The main states are:
 Pending
@@ -1053,38 +1052,38 @@ Stopped
 Shutting-down
 Terminated
 
-19.    What is VPC Peering, and how does it work across regions or accounts?
+--->>19. What is VPC Peering, and how does it work across regions or accounts?
 Answer:
 VPC Peering connects two VPCs so they can communicate privately. It works across regions and accounts using peering connections, route tables, and proper security group rules.
 
-20.    How do you connect to an EC2 instance inside a private subnet?
+--->>20.How do you connect to an EC2 instance inside a private subnet?
 Answer:
 I use a bastion host in a public subnet. First, I connect to the bastion host using SSH, then connect to the private EC2 instance from there.
 
-21.   What’s the difference between Security Groups and NACLs in AWS?
+--->>21. What’s the difference between Security Groups and NACLs in AWS?
 Answer:
 Security Groups work at the instance level and are stateful. NACLs work at the subnet level and are stateless. NACLs have separate rules for inbound and outbound traffic.
 
-22.   How would you set up VPC Peering between two VPCs?
+--->>22. How would you set up VPC Peering between two VPCs?
 Answer:
 Create a VPC peering connection, accept it in the other VPC, update route tables in both VPCs, and allow traffic in security groups and NACLs.
 
-23.   What is the AWS Shared Responsibility Model? Can you explain it with an example?
+--->>23.What is the AWS Shared Responsibility Model? Can you explain it with an example?
 Answer:
 AWS handles security of the cloud (hardware, network), while we manage security in the cloud (data, access, configurations). For example, AWS secures the servers, but we must set up IAM roles properly.
-24.   How does S3 manage versioning and object locking for data durability?
+--->>24. How does S3 manage versioning and object locking for data durability?
 Answer:
 Versioning keeps all versions of an object. Object locking prevents deletion for a set time. These features help protect data from accidental loss or overwrite.
-25.   How would you monitor the performance of an EC2 instance using CloudWatch?
+--->>25. How would you monitor the performance of an EC2 instance using CloudWatch?
 Answer:
 I check metrics like CPU, disk, memory, and network usage. I also set alarms to notify when usage is too high or something goes wrong.
-26.    How can you use CloudWatch to track application metrics on EC2?
+--->>. How can you use CloudWatch to track application metrics on EC2?
 Answer:
 Install and configure the CloudWatch agent. It collects logs and custom metrics like memory or app-level data. Then I view them in the CloudWatch dashboard.
-27.    Can you write a Terraform script to provision an EC2 instance and an S3 bucket?
+--->>27. Can you write a Terraform script to provision an EC2 instance and an S3 bucket?
 
 Yes. I define resources like aws_instance and aws_s3_bucket in Terraform, then use terraform apply to create them. I also use variables for reusability.
-28.    Write Terraform code to create 5 EC2 instances, each with a unique name and instance type.
+--->>28.  Write Terraform code to create 5 EC2 instances, each with a unique name and instance type.
 
 variable "instances" {
   default = {
@@ -1107,21 +1106,21 @@ resource "aws_instance" "multi"
   ami = "ami-12345678"
   instance_type = each.value
 
-29.    What CI/CD steps do you follow during software development?
+--->>29.What CI/CD steps do you follow during software development?
 
 I start with code push to Git. A pipeline runs tests, builds the app, creates a Docker image, and pushes it to a registry. Then it deploys to a test or production environment.
 
-30.          How do you build and push a Node.js Docker image to Docker Hub using a CI/CD pipeline?
+--->>30.How do you build and push a Node.js Docker image to Docker Hub using a CI/CD pipeline?
 Answer:
 In the pipeline, I add steps to build the Docker image using the Dockerfile, tag it, log in to Docker Hub, and push it using docker push.
-31.          How would you connect AWS Lambda with API Gateway for serverless deployment?
+--->>31. How would you connect AWS Lambda with API Gateway for serverless deployment?
 Answer:
 I create a Lambda function and an API Gateway endpoint. Then I connect the API to the Lambda function so that HTTP requests trigger the function.
-32. Do you have experience working with RESTful or GraphQL APIs? How have you used them?
+--->>32. Do you have experience working with RESTful or GraphQL APIs? How have you used them?
 Answer:
 Yes. I’ve used REST APIs to integrate services, test them using Postman, and monitor responses. I also deployed backend services that exposed REST endpoints for frontend teams.
-1.      Introduction
-2.      What is AWS and what type of services you have used in AWS.
+
+--->>33. What is AWS and what type of services you have used in AWS.
 Answer:
     AWS (Amazon Web Services) is a cloud computing platform that provides on-demand IT resources over the internet with pay-as-you-go pricing.
 Instead of:
@@ -1869,19 +1868,19 @@ terraform apply -var-file=dev.tfvars -auto-approve
 
 stage('QA') {
  
-How do we scale multiple VPCs using Terraform?
+--->>How do we scale multiple VPCs using Terraform?
 Answer:
 We create reusable Terraform modules for VPCs and use for_each to dynamically create multiple VPCs. For connectivity at scale, we attach them to a Transit Gateway. We use remote state with S3 and DynamoDB for team collaboration, and workspaces for environment separation.
  
-If VPC CIDR blocks are overlapping, how do you solve it?
+--->>If VPC CIDR blocks are overlapping, how do you solve it?
 Answer:
 Overlapping CIDRs cannot be connected via peering or Transit Gateway. The best practice is to re-IP one VPC with a non-overlapping CIDR. If that’s not feasible, we use PrivateLink or NAT-based communication to avoid direct routing conflicts.
  
-How do you move EBS volumes from one region to another?
+--->>How do you move EBS volumes from one region to another?
 Answer:
 EBS volumes are region-specific, so to move them across regions we create a snapshot, copy the snapshot to the target region, and then create a new EBS volume from that snapshot. For full server migration, we can create and copy an AMI instead.
 
-What are the types of encryption in S3?
+--->>What are the types of encryption in S3?
 Answer:
 S3 supports encryption at rest using SSE-S3, SSE-KMS, and SSE-C, and encryption in transit using HTTPS. In production, we usually use SSE-KMS for better key control and auditing.
 Type | Who Manages Key? | Use Case
@@ -1890,11 +1889,11 @@ SSE-KMS | AWS + You | Production, compliance
 SSE-C | You | Special cases
 Client-side | You | High security
 
-How do you scale RDS using Terraform?
+--->>How do you scale RDS using Terraform?
 Answer:
 We update the aws_db_instance resource configuration, such as instance_class for vertical scaling or allocated_storage for storage scaling. For read scaling, we create aws_db_instance with replicate_source_db. All changes are applied using terraform plan and apply, ensuring no manual drift.
 
-How do you create a new branch from an existing branch?
+--->>How do you create a new branch from an existing branch?
 Answer:
 We use git switch -c <new-branch> <base-branch> or git checkout -b <new-branch> <base-branch>. This creates the branch from the specified base and switches to it.
 To create a branch without switching, we use git branch <new-branch> <base-branch>.
@@ -1905,15 +1904,15 @@ We use sed. For example: sed -i 's/old/new/g' filename to replace globally insid
 Use sed to replace with empty string: sed -i 's/word//g' filename.
 We use find /path -name filename.
 
-If a Terraform resource block is deleted, will it throw error?
+--->>If a Terraform resource block is deleted, will it throw error?
 Answer:
 No. Terraform will detect that the resource is no longer in configuration and will plan to destroy it. It only throws an error if lifecycle prevent_destroy is enabled.
 
-What is Terraform dependency? 
+--->>What is Terraform dependency? 
 Answer:
 Terraform dependency ensures resources are created in the correct order. It can be implicit when one resource references another, or explicit using depends_on. Terraform internally builds a dependency graph to manage creation and destruction order.
 
-What is API Gateway
+--->>What is API Gateway
 Answer:
 API Gateway is:
 A managed service that acts as a front door for your backend services.
@@ -1958,9 +1957,7 @@ def check_ec2_instances():
 # Call function
 check_ec2_instances()
 
-3k technologies ==
-
-IAM policies in AWS — specifically Inline Policy vs Managed (General) Policy
+--->>IAM policies in AWS — specifically Inline Policy vs Managed (General) Policy
 Answer:
 Inline policies are directly embedded into a single IAM user, role, or group and cannot be reused. Managed policies are standalone policies that can be attached to multiple IAM identities. Managed policies are recommended because they are reusable and easier to maintain.
 There are two types of managed policies:
@@ -1973,7 +1970,7 @@ AdministratorAccess
 Created by you
 Reusable across multiple IAM entities
 
-S3 Storage Classes
+--->>S3 Storage Classes
 Answer:
 🔹 S3 Standard
 Used for frequently accessed data like applications, websites, or active files. It provides high availability and low latency across multiple Availability Zones.
@@ -2009,15 +2006,11 @@ Each subnet belongs to a different AZ
 Example:
 subnet_id = each.value
 
-TCS Project ==
-
-How do you resolve merge conflict?
+--->>How do you resolve merge conflict?
 Answer:
 When a merge conflict occurs, Git marks the conflicting files. We check them using git status, open the file, manually resolve the conflict by choosing the correct code, remove the conflict markers, stage the file using git add, and then complete the merge with git commit.
 
-Cyient ==
-
-How do you shift traffic?
+--->>How do you shift traffic?
 Answer:
 Deployment level - Rolling Update
 Service level - Blue Green and Canary
@@ -2025,7 +2018,7 @@ Ingress level - Blue Green and Canary
 Service mesh/Istio Level - Canary
 Load Balancer level - Blue Green and Canary
 
-Do you know Network Policies
+--->>Do you know Network Policies
 Answer:
 Network Policies in Kubernetes act like a firewall for pods, allowing us to control which pods or services can communicate with each other using ingress and egress rules based on labels, namespaces, or IP ranges.
 apiVersion: networking.k8s.io/v1
@@ -2042,7 +2035,7 @@ spec:
         matchLabels:
           app: frontend
 
-Can you explain Maven lifecycle?
+C--->>an you explain Maven lifecycle?
 Answer:
 Default Lifecycle (Most Used)
 This lifecycle is used for building and deploying applications.
@@ -2055,7 +2048,7 @@ verify – checks if the package is valid
 install – installs the package into the local repository
 deploy – uploads the artifact to a remote repository
 
-What is a Pod?
+--->>What is a Pod?
 Answer:
 A Pod is the smallest deployable unit in Kubernetes.
 In simple terms: A Pod is a wrapper around containers that allows Kubernetes to manage them.
