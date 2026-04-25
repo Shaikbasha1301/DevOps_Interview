@@ -153,19 +153,19 @@ pipeline{
 ---Git Hub Branching Stratagies---
 
 main → Always production-ready
-                  This branch always contains the stable and deployable version of the application.
+      This branch always contains the stable and deployable version of the application.
 develop → Integration branch where new features add
-This is the default branch where developers integrate their completed features. 
-Contains code that is tested internally but not yet ready for production.
+          This is the default branch where developers integrate their completed features. 
+          Contains code that is tested internally but not yet ready for production.
 feature/ → Short-lived development branches (per task)
- Every new feature or task gets its own branch, created from develop.
-Once completed, a pull request (PR) is raised to merge into develop.
+          Every new feature or task gets its own branch, created from develop.
+          Once completed, a pull request (PR) is raised to merge into develop.
 release/ → Created when preparing for a final release
-    Created when the develop branch is ready for a release.
-    Perform user testing (UAT )               
-    Fix bugs found during testing  
-    Prepare release notes  
-    Update version numbers
+          Created when the develop branch is ready for a release.
+          Perform user testing (UAT )               
+          Fix bugs found during testing  
+          Prepare release notes  
+          Update version numbers
 hotfix/ → Emergency fixes on production
 Created from the main branch when a critical production issue occurs.
 Used to patch production without waiting for the next release cycle.
