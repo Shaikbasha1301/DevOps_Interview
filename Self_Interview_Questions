@@ -1889,6 +1889,36 @@ SSE-KMS | AWS + You | Production, compliance
 SSE-C | You | Special cases
 Client-side | You | High security
 
+-->Terraform wants to recreate an existing production resource. How will you investigate before applying?
+
+--> cloud bill increased by 40% this month. Where would you start your investigation?
+
+-->Jenkins pipeline is successful, but the application is not accessible. How will you troubleshoot?
+
+-->How do you handle drift detection in Terraform
+
+-->Difference between 𝐥𝐨𝐜𝐚𝐥-𝐞𝐱𝐞𝐜 and 𝐫𝐞𝐦𝐨𝐭𝐞-𝐞𝐱𝐞𝐜 provisioners
+
+-->What are common Kubernetes errors you’ve faced (like CrashLoopBackOff, ImagePullError), and how did you resolve them?
+
+-->How would you perform a zero-downtime Kubernetes cluster upgrade in 
+
+ -->Explain the most challenging production incident you've handled and the architectural improvements you made afterward
+
+ -->How do you troubleshoot CrashLoopBackOff?
+
+ -->How would you design logging and monitoring for a microservices architecture
+
+--> Are you aware of security scanning tools? How do you scan Docker images—both during build and at the registry level? Are you using any extensions or tools for image scanning
+
+-->How would you manage secrets securely across multiple Kubernetes clusters and environments?
+
+-->What’s the difference between ReplicaSet, Deployment and StatefulSet?
+
+-->How do you implement zero-downtime deployment?
+
+ -->How do you handle authentication for EKS clusters and store secrets securely in your environment
+
 --->>How do you scale RDS using Terraform?
 Answer:
 We update the aws_db_instance resource configuration, such as instance_class for vertical scaling or allocated_storage for storage scaling. For read scaling, we create aws_db_instance with replicate_source_db. All changes are applied using terraform plan and apply, ensuring no manual drift.
